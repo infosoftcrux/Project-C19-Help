@@ -63,7 +63,7 @@
 						<li class="nav-item active">
 							<a class="nav-link" href="index.html">Home</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="donate.html">Donate Now</a></li>
+						<li class="nav-item"><a class="nav-link" href="donate.html">Help Someone</a></li>
 						<li class="nav-item"><a class="nav-link" href="service.html">Categories</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" id="dropdown02" data-toggle="dropdown"
@@ -355,27 +355,10 @@
 	<script src="js/contact.js"></script>
 	<script>
 		function valid3() {
-			let iii2 = "";
 			let iii1 = "";
 			iii1 = document.forms["contact"]["phone"].value;
-			iii2 = document.forms["contact"]["email"].value;
-			let ii4 = iii2.lastIndexOf(".");
-			let ii5 = iii2.indexOf("@");
 			if (iii1.length != 10) {
 				alert("Please Enter only 10 digit Phone number");
-				return false;
-			}
-			if ((ii5 == (iii2.length - 10)) || (ii5 == (iii2.length - 9))) {
-				if ((ii4 == iii2.length - 4) || (ii4 == iii2.length - 3)) {
-					return true;
-				}
-				else {
-					alert("Please Enter valid Email");
-					return false;
-				}
-			}
-			else {
-				alert("Please Enter valid Email");
 				return false;
 			}
 

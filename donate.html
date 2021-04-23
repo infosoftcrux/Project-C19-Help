@@ -63,7 +63,7 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="donate.html">Donate Now</a></li>
+                        <li class="nav-item"><a class="nav-link" href="donate.html">Help Someone</a></li>
                         <li class="nav-item"><a class="nav-link" href="service.html">Categories</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="dropdown02" data-toggle="dropdown"
@@ -101,12 +101,22 @@
             </div>
         </nav>
     </header>
+    <section class="page-title bg-1">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class=" text-center">
+                        <h1 class="text-capitalize  text-lg" style="color: whitesmoke;">Hi,How can you help!!</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- main start  -->
     <main class="container mt-5">
         <div class="container">
-            <h1
-                style="text-align: center;  font-weight: lighter; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-                Hi,How can you help!!</h1>
             <form name="post" class="row g-3 my-4 border-top border-bottom border-danger py-5"
                 onsubmit="return valid()">
                 <div class="col-md-6">
@@ -148,7 +158,7 @@
                 </div>
 
                 <div class="col-12 mt-3">
-                    <label for="productdis" class="form-label">Description About your product</label>
+                    <label for="productdis" class="form-label">Description</label>
                     <textarea class="form-control" id="productdis" rows="3"></textarea>
                 </div>
                 <div>
@@ -283,31 +293,28 @@
     <!-- form validation -->
     <script>
         function valid() {
-            let i2 = "";
             let i1 = "";
             i1 = document.forms["post"]["phone"].value;
-            i2 = document.forms["post"]["email"].value;
-            let i4 = i2.lastIndexOf(".");
-            let i5 = i2.indexOf("@");
+            // let i4 = i2.lastIndexOf(".");
+            // let i5 = i2.indexOf("@");
             if (i1.length != 10) {
                 alert("Please Enter only 10 digit Phone number");
                 return false;
             }
-            if ((i5 == (i2.length - 10)) || (i5 == (i2.length - 9))) {
+            // if ((i5 == (i2.length - 10)) || (i5 == (i2.length - 9))) {
 
-                if ((i4 == i2.length - 4) || (i4 == i2.length - 3)) {
-                    return true;
-                }
-                else {
-                    alert("Please Enter valid Email");
-                    return false;
-                }
-            }
-            else {
-                alert("Please Enter valid Email");
-                return false;
-            }
-
+            //     if ((i4 == i2.length - 4) || (i4 == i2.length - 3)) {
+            //         return true;
+            //     }
+            //     else {
+            //         alert("Please Enter valid Email");
+            //         return false;
+            //     }
+            // }
+            // else {
+            //     alert("Please Enter valid Email");
+            //     return false;
+            // }
         }
     </script>
     <!-- Main jQuery -->
